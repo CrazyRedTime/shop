@@ -1,9 +1,20 @@
 .cart {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    span {
+        white-space: nowrap;
+    }
 }
 
 .link {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
+}
+
+.mainCart {
+    margin-bottom: 16px;
+    h2 {
+        color: blue;
+        text-decoration: underline;
+    }
 }

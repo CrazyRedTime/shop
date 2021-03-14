@@ -39,7 +39,7 @@ const CustomerData = ({ data, updateCustomerData }) => {
     <>
       <CheckoutNavbar />
       <h1>Ваши данные</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className={styles.Mainform} onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.form}>
           <label>
             Имя
@@ -97,7 +97,7 @@ const CustomerData = ({ data, updateCustomerData }) => {
               name="phone"
               type="tel"
               placeholder="+7-xxx-xxx-xxxx"
-              maxLength={15}
+              maxLength={20}
               defaultValue={data.phone}
               ref={register({
                 validate: {
@@ -113,10 +113,10 @@ const CustomerData = ({ data, updateCustomerData }) => {
             {errors.phone?.type === "validNumber" && <p>Неверный формат</p>}
           </label>
         </div>
-        <button disabled={!isValid}>Продолжить</button>
+        <button className={styles.buttonAction} disabled={!isValid}>Продолжить</button>
       </form>
       <div>
-        <Link to="/">Вернуться на главную</Link>
+        <Link className={styles.bac} to="/">Вернуться на главную</Link>
       </div>
     </>
   );

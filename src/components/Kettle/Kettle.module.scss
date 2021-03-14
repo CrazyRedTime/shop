@@ -1,42 +1,61 @@
 .kettle {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .infoContainer {
-  display: flex;
-  justify-content: space-around;
-};
+    display: flex;
+    justify-content: space-around;
+}
 
+;
 .image {
-  width: 360px;
-  height: 480px;
-};
+    width: 360px;
+    height: 480px;
+}
 
+;
 .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .cartBtn {
-  height: 270px;
-  display: flex;
-  align-items: center;
+    height: 270px;
+    display: flex;
+    align-items: center;
 }
 
 .btn {
-  height: 100px;
-  width: 150px;
-  font-size: 20px;
-};
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 10px 24px;
+    background: #00800024;
+}
 
+;
 .container {
-  display: flex;
+    display: flex;
 }
 
 .sidebar {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    flex: 0 0 auto;
+    background: #ff7f5030;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.buttonBack {
+    background: #ff000040;
+    border-radius: 20px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 8px;
+    text-decoration: none;
 }

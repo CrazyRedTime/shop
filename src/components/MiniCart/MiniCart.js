@@ -5,13 +5,14 @@ import styles from './MiniCart.module.scss';
 
 const MiniCart = ({ kettlesCount, totalPrice }) => {
   return (
-    <div>
+    <div className={styles.mainCart}>
       <Link to="/cart" className={styles.link}>
+        <h2>Корзина</h2>
+      </Link>
         <div className={styles.cart}>
           <span>Товаров: {kettlesCount}</span>
           <span>Стоимость: {totalPrice}₽</span>
         </div>
-      </Link>
     </div>
   );
 };

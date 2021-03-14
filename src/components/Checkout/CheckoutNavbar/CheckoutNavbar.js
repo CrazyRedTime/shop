@@ -8,10 +8,9 @@ const CheckoutHeader = ({isDataSubmitted, isAddressSubmitted, match}) => {
   console.log(isDataSubmitted, isAddressSubmitted);
 
   return (
-    <ul>
-      <li><Link className={cn(styles.link, {
-        [styles.active]: match.path === '/checkout'
-      })} to={'/checkout'}>Ваши данные</Link></li>
+    <ul className={styles.listCheckout}>
+      <li>
+        <Link className={cn(styles.link, {[styles.active]: match.path === '/checkout'})} to={'/checkout'}>Ваши данные</Link></li>
       <li><Link className={cn(styles.link, {
         [styles.active]: match.path === '/address_confirmation',
         [styles.disabledLink]: !isDataSubmitted

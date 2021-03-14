@@ -1,12 +1,18 @@
 .link {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }
 
 .active {
-  background-color: #a6c1ed;
+    background-color: #a6c1ed;
 }
 
 .disabledLink {
-  pointer-events: none;
+    pointer-events: none;
+}
+
+.listCheckout {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }

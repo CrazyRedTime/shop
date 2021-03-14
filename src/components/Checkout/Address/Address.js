@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
 import { updateAddress } from "../../../redux/checkout";
 import CheckoutNavbar from "../CheckoutNavbar/CheckoutNavbar";
+import styles from './Address.module.scss';
 
 const Address = ({address, updateAddress}) => {
   const [isSubmited, setIsSubmited] = useState(false);
@@ -38,7 +39,7 @@ const Address = ({address, updateAddress}) => {
     <div>
       <CheckoutNavbar />
       <h1>Ваш адрес</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className={styles.addressForm} onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label>
             Город
@@ -136,10 +137,10 @@ const Address = ({address, updateAddress}) => {
             )}
           </label>
         </div>
-        <button disabled={!isValid}>Продолжить</button>
+        <button className={styles.buttonAction} disabled={!isValid}>Продолжить</button>
       </form>
       <div>
-        <Link to="/checkout">Назад</Link>
+        <Link className={styles.back} to="/checkout">Назад</Link>
       </div>
     </div>
   );

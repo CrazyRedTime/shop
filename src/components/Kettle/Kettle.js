@@ -18,7 +18,7 @@ const Kettle = ({ kettle, fetchKettleById, addKettleToCart, match }) => {
     return (
       <div className={styles.sidebar}>
         <MiniCart />
-        <Link to="/kettles">Назад</Link>
+        <Link className={styles.buttonBack} to="/kettles">Назад</Link>
       </div>
     );
   };

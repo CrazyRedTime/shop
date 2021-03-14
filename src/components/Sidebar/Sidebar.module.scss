@@ -1,24 +1,37 @@
 .sidebar {
-  background-color: cornsilk;
-  display: flex;
-  flex-direction: column;
-  height: 400px;
-};
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    input {
+        border-radius: 4px;
+        font-size: 14px;
+        margin-bottom: 16px;
+        background: #fff;
+        color: #000;
+    }
+}
 
+;
 .categories {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    background-color: cornsilk;
+    a {
+        font-size: 14px;
+        padding: 4px;
+        display: block;
+    }
 }
 
 .link {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }
 
 .active {
-  background-color: #a6c1ed;
+    background-color: #a6c1ed;
 }
 
 .listItem {
-  padding: 0;
+    padding: 0;
 }

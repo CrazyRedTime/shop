@@ -1,7 +1,23 @@
 .header {
-  width: 100%;
-  background-color: antiquewhite;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    padding: 30px 10px;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    a {
+        text-decoration: none;
+        color: #000;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        img {
+            margin-right: 14px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+    }
 }

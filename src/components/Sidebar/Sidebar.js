@@ -40,7 +40,7 @@ const Sidebar = ({ categories, changeCategory, searchKettle, match }) => {
         </div>
         {categories.map((category, index) => {
           return (
-            <div key={index}>
+            <div  key={index}>
               <Link
                 className={cn(styles.link, {
                   [styles.active]: category === match.params.category,

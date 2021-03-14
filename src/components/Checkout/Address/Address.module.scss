@@ -1,0 +1,57 @@
+.back {
+    background: #ff000040;
+    border-radius: 20px;
+    color: #000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 8px;
+    text-decoration: none;
+}
+
+.addressForm {
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        label {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            p {
+                margin: 0;
+                color: tomato;
+            }
+        }
+        input {
+            margin-left: 16px;
+            background: transparent;
+            font-size: 14px;
+            color: #000;
+            padding: 0 4px;
+            border: 0;
+            border-bottom: 1px solid #000;
+            margin-right: 20px;
+        }
+    }
+}
+
+.buttonAction {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 6px 8px;
+    background: transparent;
+    border: 1px solid green;
+    background: green;
+    margin-bottom: 20px;
+    &:disabled {
+        opacity: 0.7;
+        cursor: no-drop;
+        background: transparent;
+        color: #000;
+        border: 1px solid #000;
+    }
+}

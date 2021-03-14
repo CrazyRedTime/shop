@@ -15,9 +15,18 @@ const Cart = ({totalPrice, kettlesInCart, changeKettleCountInCart, deleteKettleF
             <img src={kettle.image} alt={kettle.name} className={styles.img}/>
             <div className={styles.cartCell}><Link className={styles.link} to={`/kettle/${kettle.id}`}>{kettle.name}</Link></div>
             <div className={styles.cartCell}><span>Стоимость: {kettle.price}₽</span></div>
-            <div className={styles.cartCell}><span>Количество: </span><input type='number' value={kettle.count} onChange={(e) => changeKettleCountInCart(kettle.id, e.target.value)}/></div>
+            <div className={styles.cartCell}><span>Количество: </span>
+              {/* <input type='number' value= onChange={(e) => changeKettleCountInCart(kettle.id, e.target.value)}/> */}
+              <div className={styles.counter}>
+                <button onClick={() => changeKettleCountInCart(kettle.id, 'remove')}>-</button>
+                <div className={styles.count}>
+                   {kettle.count}
+                 </div>
+                <button onClick={() => changeKettleCountInCart(kettle.id, 'add')}>+</button>
+              </div>
+            </div>
             <div className={styles.cartCell}>
-              <button onClick={() => deleteKettleFromCart(kettle.id)}>удалить</button>
+              <button className={styles.delete} onClick={() => deleteKettleFromCart(kettle.id)}>удалить</button>
             </div>
           </div>
         )
