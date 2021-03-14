@@ -1,0 +1,24 @@
+.sidebar {
+  background-color: cornsilk;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+};
+
+.categories {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  background-color: #a6c1ed;
+}
+
+.listItem {
+  padding: 0;
+}

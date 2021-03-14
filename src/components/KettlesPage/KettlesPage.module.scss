@@ -1,0 +1,66 @@
+.main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.kittle {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin: 20px 50px 20px 50px;
+  border: 1px solid #e6e3e3;
+  border-radius: 10px;
+};
+
+.top {
+  display: flex;
+}
+
+.img {
+  width: 210px;
+  height: 270px;
+  margin: 10px 60px 0 60px;
+}
+
+.title {
+  width: 100%;
+  padding-right: 60px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cartBtn {
+  height: 270px;
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  height: 100px;
+  width: 150px;
+  font-size: 20px;
+};
+
+.helper {
+  display: flex;
+  width: 450px;
+  justify-content: space-between;
+}
+
+.description {
+  font-size: 16px;
+}
+
+.descriptionContainer {
+  margin-top: 20px;
+  padding: 6px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,50 @@
+.cartItem {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #e6e3e3;
+  border-radius: 10px;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  width: 90px;
+  height: 120px;
+}
+
+.cartCell {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.disabledLink {
+  pointer-events: none;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn:last-child {
+  margin-left: 20px;
+}
+
+.btn {
+  border: 1px solid #e6e3e3;
+}

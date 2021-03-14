@@ -1,0 +1,42 @@
+.kettle {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: space-around;
+};
+
+.image {
+  width: 360px;
+  height: 480px;
+};
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cartBtn {
+  height: 270px;
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  height: 100px;
+  width: 150px;
+  font-size: 20px;
+};
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
