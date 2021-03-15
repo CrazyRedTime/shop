@@ -96,7 +96,7 @@ const CustomerData = ({ data, updateCustomerData }) => {
             <input
               name="phone"
               type="tel"
-              placeholder="+7-xxx-xxx-xxxx"
+              placeholder="+7xxxxxxxxxx"
               maxLength={20}
               defaultValue={data.phone}
               ref={register({
