@@ -6,6 +6,7 @@ import { updateCustomerData } from "../../../redux/checkout";
 import styles from "./CustomerData.module.scss";
 import { compose } from "redux";
 import CheckoutNavbar from "../CheckoutNavbar/CheckoutNavbar";
+import { getCustomerData } from "../../../redux/selectors";
 
 const CustomerData = ({ data, updateCustomerData }) => {
   const [isSubmited, setIsSubmited] = useState(false);
@@ -132,7 +133,7 @@ const CustomerData = ({ data, updateCustomerData }) => {
 
 const mapStateToProps = (state) => {
   return {
-    data: state.checkout.customerData,
+    data: getCustomerData(state),
   };
 };
 

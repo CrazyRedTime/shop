@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { connect } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
 import { updateAddress } from "../../../redux/checkout";
+import { getAddress } from "../../../redux/selectors";
 import CheckoutNavbar from "../CheckoutNavbar/CheckoutNavbar";
 import styles from './Address.module.scss';
 
@@ -148,7 +149,7 @@ const Address = ({address, updateAddress}) => {
 
 const mapStateToProps = (state) => {
   return {
-    address: state.checkout.address
+    address: getAddress(state)
   }
 }
 

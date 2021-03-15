@@ -3,6 +3,7 @@ import cn from 'classnames';
 import styles from './CheckoutNavbar.module.scss'
 import { compose } from "redux";
 import { connect } from "react-redux";
+import { getAddressState, getDataState } from "../../../redux/selectors";
 
 const CheckoutHeader = ({isDataSubmitted, isAddressSubmitted, match}) => {
 
@@ -24,8 +25,8 @@ const CheckoutHeader = ({isDataSubmitted, isAddressSubmitted, match}) => {
 
 const mapStateToProps = (state) => {
   return {
-    isDataSubmitted: state.checkout.customerData.isSubmitted,
-    isAddressSubmitted: state.checkout.address.isSubmitted
+    isDataSubmitted: getDataState(state),
+    isAddressSubmitted: getAddressState(state)
   } 
 }
 

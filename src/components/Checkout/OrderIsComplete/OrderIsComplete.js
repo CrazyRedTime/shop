@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { getAddress, getCustomerData } from "../../../redux/selectors";
 import styles from './OrderIsComplete.module.scss'
 
 const OrderIsComplete = ({data, address}) => {
@@ -21,8 +22,8 @@ const OrderIsComplete = ({data, address}) => {
 
 const mapStateToProps = (state) => {
   return {
-    data: state.checkout.customerData,
-    address: state.checkout.address,
+    data: getCustomerData(state),
+    address: getAddress(state),
   };
 };
 

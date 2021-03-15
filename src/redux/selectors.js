@@ -66,3 +66,19 @@ export const getCategories = (state) => {
   const uniqCategoires = [...new Set(categotries)].sort();
   return uniqCategoires;
 };
+
+export const getCustomerData = (state) => {
+  return state.checkout.customerData
+} 
+
+export const getAddress = (state) => {
+  return state.checkout.address
+};
+
+export const getDataState = (state) => {
+  return state.checkout.customerData.isSubmitted
+};
+
+export const getAddressState = (state) => {
+  return state.checkout.address.isSubmitted
+}
