@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useForm } from "react-hook-form";
+import { useForm} from "react-hook-form";
 import { connect } from "react-redux";
 import { Link, Redirect, withRouter } from "react-router-dom";
 import { updateCustomerData } from "../../../redux/checkout";
@@ -57,7 +57,9 @@ const CustomerData = ({ data, updateCustomerData }) => {
                 },
               })}
             />
-            {errors.firstName?.type === "required" && <p>Это поле обязательно</p>}
+            {errors.firstName?.type === "required" && (
+              <p>Это поле обязательно</p>
+            )}
             {errors.firstName?.type === "minLength" && (
               <p>Минимум два символа</p>
             )}
@@ -82,7 +84,9 @@ const CustomerData = ({ data, updateCustomerData }) => {
                 },
               })}
             />
-            {errors.lastName?.type === "required" && <p>Это поле обязательно</p>}
+            {errors.lastName?.type === "required" && (
+              <p>Это поле обязательно</p>
+            )}
             {errors.lastName?.type === "minLength" && (
               <p>Минимум два символа</p>
             )}
@@ -97,14 +101,14 @@ const CustomerData = ({ data, updateCustomerData }) => {
               name="phone"
               type="tel"
               placeholder="+7xxxxxxxxxx"
-              maxLength={20}
+              maxLength={12}
               defaultValue={data.phone}
               ref={register({
                 validate: {
                   required: (value) => value.length > 0,
                   validNumber: (value) =>
                     new RegExp(
-                      /^\+?([7]{1})\)?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
+                      /^\+?([7]{1})\)?([0-9]{3})\)?([0-9]{3})([0-9]{4})$/
                     ).test(value),
                 },
               })}
@@ -113,10 +117,14 @@ const CustomerData = ({ data, updateCustomerData }) => {
             {errors.phone?.type === "validNumber" && <p>Неверный формат</p>}
           </label>
         </div>
-        <button className={styles.buttonAction} disabled={!isValid}>Продолжить</button>
+        <button className={styles.buttonAction} disabled={!isValid}>
+          Продолжить
+        </button>
       </form>
       <div>
-        <Link className={styles.bac} to="/">Вернуться на главную</Link>
+        <Link className={styles.bac} to="/">
+          Вернуться на главную
+        </Link>
       </div>
     </>
   );
