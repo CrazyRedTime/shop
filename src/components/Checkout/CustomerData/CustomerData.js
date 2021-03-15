@@ -62,7 +62,7 @@ const CustomerData = ({ data, updateCustomerData }) => {
               <p>Минимум два символа</p>
             )}
             {errors.firstName?.type === "onlyLetters" && (
-              <p>Используейте только буквы</p>
+              <p>Используейте только кириллицу</p>
             )}
           </label>
 
@@ -87,7 +87,7 @@ const CustomerData = ({ data, updateCustomerData }) => {
               <p>Минимум два символа</p>
             )}
             {errors.lastName?.type === "onlyLetters" && (
-              <p>Используейте только буквы</p>
+              <p>Используейте только кириллицу</p>
             )}
           </label>
 

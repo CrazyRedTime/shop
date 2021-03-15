@@ -5,7 +5,6 @@ import { compose } from "redux";
 import { connect } from "react-redux";
 
 const CheckoutHeader = ({isDataSubmitted, isAddressSubmitted, match}) => {
-  console.log(isDataSubmitted, isAddressSubmitted);
 
   return (
     <ul className={styles.listCheckout}>
