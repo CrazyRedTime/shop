@@ -14,11 +14,11 @@ const CheckoutHeader = ({isDataSubmitted, isAddressSubmitted, match}) => {
       <li><Link className={cn(styles.link, {
         [styles.active]: match.path === '/address_confirmation',
         [styles.disabledLink]: !isDataSubmitted
-      })} to={'/address_confirmation'}>Адрес</Link></li>
+      })} to={isDataSubmitted ? '/address_confirmation' : '#'}>Адрес</Link></li>
       <li><Link className={cn(styles.link, {
         [styles.active]: match.path === '/payment',
         [styles.disabledLink]: !isAddressSubmitted
-      })} to={'/payment'}>Оплата</Link></li>
+      })} to={isAddressSubmitted ? '/payment' : '#'}>Оплата</Link></li>
     </ul>
   )
 };

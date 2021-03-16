@@ -1,3 +1,5 @@
+import { createSelector } from "reselect";
+
 export const getKettleById = (state, id) => {
   return state.kettles[id]
 };
@@ -28,9 +30,14 @@ export const getKettles = (state) => {
   return kettles;
 };
 
-export const getKettlesInCartCount = (state) => {
-  return state.cart.length;
+const getCart = (state) => {;
+  return state.cart;
 };
+
+export const getKettlesInCartCount = createSelector(
+  [getCart],
+  cart => cart.length
+);
 
 export const getCartPrice = (state) => {
   const totalPrice = state.cart.map(id => getKettleById(state, id))
